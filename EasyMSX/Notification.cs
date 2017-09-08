@@ -11,14 +11,15 @@ namespace com.bloomberg.emsx.samples {
 		    ADMIN
 	    }
 	
-	    public enum NotificationType { //expired
+	    public enum NotificationType { 
 		    NEW,
 		    INITIALPAINT,
 		    UPDATE,
 		    DELETE,
 		    CANCEL,
-		    ERROR
-	    }
+		    ERROR,
+            FIELD
+        }
 
 	    public NotificationCategory category;
 	    public NotificationType type;

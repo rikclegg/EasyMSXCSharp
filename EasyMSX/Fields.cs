@@ -11,7 +11,7 @@ namespace com.bloomberg.emsx.samples {
 	
 	    private List<Field> fields = new List<Field>();
 	
-	    FieldsOwner owner;
+	    internal FieldsOwner owner;
 	
 	    private List<FieldChange> fieldChanges;
 	
