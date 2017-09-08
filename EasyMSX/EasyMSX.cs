@@ -19,14 +19,12 @@
  */
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using EventHandler = Bloomberglp.Blpapi.EventHandler;
 using Name = Bloomberglp.Blpapi.Name;
 using Session = Bloomberglp.Blpapi.Session;
 using Service = Bloomberglp.Blpapi.Service;
-using MessageHandler = com.bloomberg.emsx.samples.MessageHandler;
 using SessionOptions = Bloomberglp.Blpapi.SessionOptions;
 using CorrelationID = Bloomberglp.Blpapi.CorrelationID;
 using LogLevels = com.bloomberg.emsx.samples.Log.LogLevels;
@@ -38,7 +36,8 @@ using Message = Bloomberglp.Blpapi.Message;
 using Request = Bloomberglp.Blpapi.Request;
 using Subscription = Bloomberglp.Blpapi.Subscription;
 
-namespace com.bloomberg.emsx.samples {
+namespace com.bloomberg.emsx.samples
+{
 
     public class EasyMSX : NotificationHandler {
 
