@@ -2,7 +2,7 @@
 
 namespace com.bloomberg.emsx.samples {
 
-    interface MessageHandler {
+    public interface MessageHandler {
 	    void processMessage(Message message);
     }
 

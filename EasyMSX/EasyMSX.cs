@@ -359,8 +359,29 @@ namespace com.bloomberg.emsx.samples
 			    System.Console.Error.WriteLine(e.StackTrace);
 		    }
 	    }
-	
-	    internal void subscribe(String topic, MessageHandler handler) {
+
+        public CorrelationID sendRequest(Request request, MessageHandler handler)
+        {
+
+            CorrelationID newCID = new CorrelationID();
+
+            Log.LogMessage(LogLevels.BASIC, "EMSXAPI: Send external request...adding MessageHandler [" + newCID + "]");
+
+            requestMessageHandlers.Add(newCID, handler);
+
+            try
+            {
+                session.SendRequest(request, newCID);
+                return newCID;
+            }
+            catch (Exception e)
+            {
+                System.Console.Error.WriteLine(e.StackTrace);
+                return null;
+            }
+        }
+
+        internal void subscribe(String topic, MessageHandler handler) {
 
 		    CorrelationID newCID = new CorrelationID();
 		    subscriptionMessageHandlers.Add(newCID, handler);
@@ -380,6 +401,10 @@ namespace com.bloomberg.emsx.samples
 			    System.Console.Error.WriteLine(e.StackTrace);
 		    }
 	    }
+
+        public Request createRequest(string requestType) {
+            return this.emsxService.CreateRequest(requestType);
+        }
 
 	    public void processNotification(Notification notification) {
 		    if(globalNotificationHandler!=null && !notification.consume) globalNotificationHandler.processNotification(notification);
