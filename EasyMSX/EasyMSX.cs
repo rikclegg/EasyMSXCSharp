@@ -211,6 +211,13 @@ namespace com.bloomberg.emsx.samples
         {
             routes = new Routes(this);
         }
+
+        public void start()
+        {
+            orders.subscribe();
+            routes.subscribe();
+        }
+
         public void processEvent(Event evt, Session session)
         {
             switch (evt.Type)

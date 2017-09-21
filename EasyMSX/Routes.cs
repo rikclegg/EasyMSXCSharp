@@ -19,10 +19,9 @@ namespace com.bloomberg.emsx.samples {
 	
 	    internal Routes(EasyMSX emsxapi) {
 		    this.emsxapi = emsxapi;
-		    subscribe();
 	    }
 	
-	    private void subscribe() {
+	    internal void subscribe() {
 		
 		    Log.LogMessage(LogLevels.BASIC, "Routes: Subscribing");
 		
