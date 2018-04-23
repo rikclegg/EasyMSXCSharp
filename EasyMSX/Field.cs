@@ -36,6 +36,11 @@ namespace com.bloomberg.emsx.samples
             return this.current_value;
         }
 
+        public string previousValue()
+        {
+            return this.old_value;
+        }
+
         internal void setName(string name)
         {
             this._name = name;
