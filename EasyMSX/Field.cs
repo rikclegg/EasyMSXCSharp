@@ -55,6 +55,7 @@ namespace com.bloomberg.emsx.samples
                 this.old_value = this.current_value;
                 this.current_value = value;
 
+                //delay calling notification handlers until all fields set. See Fields.PopulateFields method
                 if (this.parent.owner is Order) {
                     this.notify(new Notification(NotificationCategory.ORDER, NotificationType.FIELD, this.parent.owner, new List<FieldChange> {this.getFieldChanged()}));
                 } else if (this.parent.owner is Route) {

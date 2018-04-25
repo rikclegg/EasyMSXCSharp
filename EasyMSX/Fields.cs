@@ -88,7 +88,8 @@ namespace com.bloomberg.emsx.samples {
 				    }
 			    }
 		    }
-
+            // Once all fields set, check if any field level notifications need to be sent. This ensures that when
+            // a notification is sent, all field values resulting from this event are set.
 	    }
 	
 	    private SchemaFieldDefinition findSchemaFieldByName(String name, List<SchemaFieldDefinition>fields) {
