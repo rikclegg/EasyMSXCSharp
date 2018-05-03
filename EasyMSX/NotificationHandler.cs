@@ -2,6 +2,6 @@
 {
     public interface NotificationHandler
     {
-        void processNotification(Notification notification);
+        void ProcessNotification(Notification notification);
     }
 }

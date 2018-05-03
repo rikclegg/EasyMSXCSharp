@@ -85,11 +85,11 @@ namespace com.bloomberg.emsx.samples {
 		    notificationHandlers.Add(notificationHandler);
 	    }
 	
-	    public void processNotification(Notification notification) {
+	    public void ProcessNotification(Notification notification) {
 		    foreach(NotificationHandler nh in notificationHandlers) {
-			    if(!notification.consume) nh.processNotification(notification);
+			    if(!notification.consume) nh.ProcessNotification(notification);
 		    }
-		    if(!notification.consume) emsxapi.processNotification(notification);
+		    if(!notification.consume) emsxapi.ProcessNotification(notification);
 	    }
 
 	    public int count() {

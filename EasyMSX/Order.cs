@@ -31,9 +31,9 @@ namespace com.bloomberg.emsx.samples {
 	    internal void notify(Notification notification) {
 		
 		    foreach(NotificationHandler nh in notificationHandlers) {
-			    if(!notification.consume) nh.processNotification(notification);
+			    if(!notification.consume) nh.ProcessNotification(notification);
 		    }
-		    if(!notification.consume) parent.processNotification(notification);
+		    if(!notification.consume) parent.ProcessNotification(notification);
 
 	    }
     }

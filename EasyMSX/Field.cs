@@ -95,7 +95,7 @@ namespace com.bloomberg.emsx.samples
 
             foreach (NotificationHandler nh in notificationHandlers)
             {
-                if (!notification.consume) nh.processNotification(notification);
+                if (!notification.consume) nh.ProcessNotification(notification);
             }
         }
 

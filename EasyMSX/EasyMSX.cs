@@ -423,9 +423,10 @@ namespace com.bloomberg.emsx.samples
         {
             return this.emsxService.CreateRequest(requestType);
         }
-        public void processNotification(Notification notification)
+
+        public void ProcessNotification(Notification notification)
         {
-            if (globalNotificationHandler != null && !notification.consume) globalNotificationHandler.processNotification(notification);
+            if (globalNotificationHandler != null && !notification.consume) globalNotificationHandler.ProcessNotification(notification);
         }
     }
 }
